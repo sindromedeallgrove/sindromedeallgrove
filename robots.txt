@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sindromedeallgrove.org/sitemap.xml

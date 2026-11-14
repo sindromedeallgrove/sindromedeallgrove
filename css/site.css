@@ -506,3 +506,4 @@ main>section.alt:first-child,section.alt{background-color:var(--tint)}
 .about h2{margin-top:1.6em;font-size:1.35rem}
 .dolist{padding-left:1.2em;margin:0 0 1em}.dolist li{margin-bottom:.5em;text-align:left}
 .alertbox .tk{margin:.8em 0 0;padding-top:.7em;border-top:1px dashed currentColor}.tranki .btn{margin-top:.6em;display:inline-block}
+.getpdf{margin-top:28px}.getpdf h3{margin-top:0}.getpdf details{margin:.5em 0}.getpdf summary{cursor:pointer;font-weight:600}.getpdf pre{white-space:pre-wrap;font:inherit;font-size:.92em;background:rgba(127,127,127,.08);padding:.8em 1em;border-radius:8px;margin:.5em 0 0}

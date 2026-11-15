@@ -512,3 +512,4 @@ main>section.alt:first-child,section.alt{background-color:var(--tint)}
 .tranki .tk-nota{font-size:.9em;opacity:.8;margin-top:-.2em}
 .alertbox .tk small{font-size:.85em}
 #tu-tranki{scroll-margin-top:90px}
+.pdfdoc{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:18px 0}.gl{margin:18px 0}.gl-item{padding:10px 0;border-bottom:1px solid rgba(127,127,127,.2)}.gl dt{font-weight:700;color:var(--sub,#1f6f8b)}.gl dd{margin:4px 0 0}#gq{width:100%;max-width:420px;padding:10px 14px;border-radius:10px;border:1px solid rgba(127,127,127,.4);font:inherit;margin-top:6px;background:transparent;color:inherit}

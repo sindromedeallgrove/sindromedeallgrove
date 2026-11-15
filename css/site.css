@@ -507,3 +507,8 @@ main>section.alt:first-child,section.alt{background-color:var(--tint)}
 .dolist{padding-left:1.2em;margin:0 0 1em}.dolist li{margin-bottom:.5em;text-align:left}
 .alertbox .tk{margin:.8em 0 0;padding-top:.7em;border-top:1px dashed currentColor}.tranki .btn{margin-top:.6em;display:inline-block}
 .getpdf{margin-top:28px}.getpdf h3{margin-top:0}.getpdf details{margin:.5em 0}.getpdf summary{cursor:pointer;font-weight:600}.getpdf pre{white-space:pre-wrap;font:inherit;font-size:.92em;background:rgba(127,127,127,.08);padding:.8em 1em;border-radius:8px;margin:.5em 0 0}
+.tranki .tk-logo{margin:.4em 0 .5em;line-height:0}.tranki .tk-logo img{height:43px;width:auto;max-width:100%}
+.tranki .tk-oscuro{display:none}:root[data-theme="dark"] .tranki .tk-claro{display:none}:root[data-theme="dark"] .tranki .tk-oscuro{display:inline}
+.tranki .tk-nota{font-size:.9em;opacity:.8;margin-top:-.2em}
+.alertbox .tk small{font-size:.85em}
+#tu-tranki{scroll-margin-top:90px}

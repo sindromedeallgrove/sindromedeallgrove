@@ -518,3 +518,5 @@ main>section.alt:first-child,section.alt{background-color:var(--tint)}
 .pn small{color:#fff}
 :root[data-theme="dark"]{--alert:#ff8a80}
 :root[data-theme="dark"] .gl dt{color:#7fd0ea}
+footer .fnav a{display:inline-block;padding-top:6px;padding-bottom:6px}
+a.chip.free{padding-top:5px;padding-bottom:5px}

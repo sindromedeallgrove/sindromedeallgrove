@@ -520,3 +520,7 @@ main>section.alt:first-child,section.alt{background-color:var(--tint)}
 :root[data-theme="dark"] .gl dt{color:#7fd0ea}
 footer .fnav a{display:inline-block;padding-top:6px;padding-bottom:6px}
 a.chip.free{padding-top:5px;padding-bottom:5px}
+
+.chips button.chip.esp{background:none;border:0;padding:4px 0;font:inherit;font-size:.8rem;color:var(--blue-d);cursor:pointer;text-decoration:underline;text-decoration-color:rgba(25,118,197,.35);text-underline-offset:3px}
+.chips button.chip.esp:hover{color:var(--navy);text-decoration-color:currentColor}
+.linkbtn{background:none;border:0;padding:8px 0;font:inherit;font-size:.92rem;color:var(--blue-d);text-decoration:underline;cursor:pointer}

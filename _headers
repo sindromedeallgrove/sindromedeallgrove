@@ -1,0 +1,10 @@
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+/img/*
+  Cache-Control: public, max-age=2592000
+/icono-sindrome-allgrove.png
+  Cache-Control: public, max-age=2592000
+/docs/*
+  Cache-Control: public, max-age=86400

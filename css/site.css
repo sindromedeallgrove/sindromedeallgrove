@@ -1,3 +1,4 @@
+@font-face{font-family:"Outfit";src:url(/fonts/outfit-latin.woff) format("woff");font-weight:300 700;font-style:normal;font-display:swap}
 
 :root{
   /* Guía de salud, sobria y cercana: columna de lectura a la izquierda, gráficos al lado, tres colores de marca usados por función */
@@ -509,7 +510,11 @@ main>section.alt:first-child,section.alt{background-color:var(--tint)}
 .getpdf{margin-top:28px}.getpdf h3{margin-top:0}.getpdf details{margin:.5em 0}.getpdf summary{cursor:pointer;font-weight:600}.getpdf pre{white-space:pre-wrap;font:inherit;font-size:.92em;background:rgba(127,127,127,.08);padding:.8em 1em;border-radius:8px;margin:.5em 0 0}
 .tranki .tk-logo{margin:.4em 0 .5em;line-height:0}.tranki .tk-logo img{height:43px;width:auto;max-width:100%}
 .tranki .tk-oscuro{display:none}:root[data-theme="dark"] .tranki .tk-claro{display:none}:root[data-theme="dark"] .tranki .tk-oscuro{display:inline}
-.tranki .tk-nota{font-size:.9em;opacity:.8;margin-top:-.2em}
+.tranki .tk-nota{font-size:.9em;margin-top:-.2em;color:var(--muted)}
 .alertbox .tk small{font-size:.85em}
 #tu-tranki{scroll-margin-top:90px}
 .pdfdoc{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:18px 0}.gl{margin:18px 0}.gl-item{padding:10px 0;border-bottom:1px solid rgba(127,127,127,.2)}.gl dt{font-weight:700;color:var(--sub,#1f6f8b)}.gl dd{margin:4px 0 0}#gq{width:100%;max-width:420px;padding:10px 14px;border-radius:10px;border:1px solid rgba(127,127,127,.4);font:inherit;margin-top:6px;background:transparent;color:inherit}
+
+.pn small{color:#fff}
+:root[data-theme="dark"]{--alert:#ff8a80}
+:root[data-theme="dark"] .gl dt{color:#7fd0ea}

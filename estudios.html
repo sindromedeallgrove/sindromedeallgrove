@@ -19,9 +19,8 @@
 <meta name="theme-color" content="#1f2a5c">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://sindromedeallgrove.org/#grupo", "name": "Grupo de familias con síndrome de Allgrove en Colombia", "url": "https://sindromedeallgrove.org/", "email": "sindromeallgrove@gmail.com", "logo": "https://sindromedeallgrove.org/img/compartir.png", "areaServed": "CO"}, {"@type": "MedicalWebPage", "url": "https://sindromedeallgrove.org/estudios", "name": "Estudios científicos sobre el síndrome de Allgrove", "description": "Las publicaciones científicas sobre el síndrome de Allgrove (triple A) desde 1978, en orden cronológico y con buscador por palabra clave.", "inLanguage": "es", "isPartOf": {"@id": "https://sindromedeallgrove.org/#sitio"}, "publisher": {"@id": "https://sindromedeallgrove.org/#grupo"}, "about": {"@type": "MedicalCondition", "name": "Síndrome de Allgrove", "alternateName": ["Síndrome triple A", "Síndrome 4A", "Triple A syndrome", "Allgrove syndrome", "Achalasia-addisonianism-alacrima syndrome"], "code": [{"@type": "MedicalCode", "codingSystem": "OMIM", "codeValue": "231550"}, {"@type": "MedicalCode", "codingSystem": "ORPHA", "codeValue": "869"}]}, "audience": [{"@type": "PeopleAudience", "audienceType": "Pacientes y familias"}, {"@type": "MedicalAudience", "audienceType": "Profesionales de la salud"}], "lastReviewed": "2026-11-14"}]}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 52 60%27%3E%3Cpath pathLength=%273%27 d=%27M26 4C26 4 6 28 6 40a20 20 0 0 0 40 0C46 28 26 4 26 4z%27 fill=%27none%27 stroke=%27%231976c5%27 stroke-width=%277%27 stroke-linecap=%27round%27 stroke-dasharray=%27.86 2.14%27 stroke-dashoffset=%27-.07%27/%3E%3Cpath pathLength=%273%27 d=%27M26 4C26 4 6 28 6 40a20 20 0 0 0 40 0C46 28 26 4 26 4z%27 fill=%27none%27 stroke=%27%231f9467%27 stroke-width=%277%27 stroke-linecap=%27round%27 stroke-dasharray=%27.86 2.14%27 stroke-dashoffset=%27-1.07%27/%3E%3Cpath pathLength=%273%27 d=%27M26 4C26 4 6 28 6 40a20 20 0 0 0 40 0C46 28 26 4 26 4z%27 fill=%27none%27 stroke=%27%23cf1578%27 stroke-width=%277%27 stroke-linecap=%27round%27 stroke-dasharray=%27.86 2.14%27 stroke-dashoffset=%27-2.07%27/%3E%3Ccircle cx=%2726%27 cy=%2741%27 r=%275%27 fill=%27%231f2a5c%27/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css">
+<link rel="preload" href="/fonts/outfit-latin.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="/css/site.css?v=285618c9">
 <script>try{if(localStorage.getItem("tema")==="oscuro")document.documentElement.dataset.theme="dark"}catch(e){}</script>
 </head>
 <body class="c2"><a id="arriba"></a>
@@ -53,7 +52,7 @@
   <div id="slist"></div>
   <button class="btn blue" id="more" hidden data-en="Show more">Mostrar más</button>
   <div class="note getpdf">
-    <h3 data-en="Can't open a study?">¿No puede abrir un estudio?</h3>
+    <h3 aria-level="2" data-en="Can't open a study?">¿No puede abrir un estudio?</h3>
     <p data-en="Studies with the «Read free» button can be read in full. The rest belong to their journals and cannot be posted here, but most authors gladly share their copy if asked by e-mail. The author's address is usually on the PubMed page or on the first page of the article.">Los que tienen el botón «Leer gratis» se pueden leer completos. Los demás pertenecen a sus revistas y no se pueden subir aquí, pero la mayoría de autores comparte con gusto su copia si se la piden por correo. El correo del autor suele estar en la página de PubMed o en la primera hoja del artículo.</p>
     <details><summary data-en="Model e-mail in English (to send to the author)">Modelo de correo en inglés (para enviar al autor)</summary><pre>Subject: Request for a copy of your article on triple A syndrome
 
@@ -171,7 +170,7 @@ const TOPIC_EN=['Anaesthesia','Oxidative stress','Oesophagus / nutrition','Ferti
   r.sort((a,b)=>asc?a[0]-b[0]:b[0]-a[0]);
   const L=$('#slist');L.textContent='';$('#scount').textContent=r.length+T(' estudios',' studies');
   let y=null;r.slice(0,limit).forEach(s=>{if(s[0]!==y){y=s[0];L.append(el('div','year',y))}
-   const c=el('article','study'),h=el('h4'),a=el('a','',s[1]);a.href=/^http/.test(s[7])?s[7]:'https://pubmed.ncbi.nlm.nih.gov/'+s[7]+'/';a.target='_blank';a.rel='noopener';h.append(a);
+   const c=el('article','study'),h=el('h4'),a=el('a','',s[1]);h.setAttribute('aria-level','2');a.href=/^http/.test(s[7])?s[7]:'https://pubmed.ncbi.nlm.nih.gov/'+s[7]+'/';a.target='_blank';a.rel='noopener';h.append(a);
    const ch=el('div','chips');ch.append(el('span','chip t',ty(s[4])));s[5].forEach(t=>ch.append(el('span','chip',tp(t))));if(PMC[s[7]]){const f=el('a','chip free',T('Leer gratis el estudio completo','Read the full study free'));f.href='https://pmc.ncbi.nlm.nih.gov/articles/'+PMC[s[7]]+'/';f.target='_blank';f.rel='noopener';ch.append(f)}else if(s[6])ch.append(el('span','chip free',T('Texto completo gratis','Free full text')));
    c.append(h,el('div','meta',s[2]+T(' y cols., ',' et al., ')+s[3]+', '+s[0]));if(s[8]&&LANG==='es')c.append(el('p','why',s[8]));if(q&&KW[s[7]]&&LANG==='es')c.append(el('p','why kw','En el resumen: '+KW[s[7]]));c.append(ch);L.append(c)});
   if(!r.length)L.append(el('p','msg',q?T('Ningún estudio de la lista lo menciona en el título ni en el resumen. Pruebe con otra palabra o repita la búsqueda en PubMed con el enlace de arriba. Si tampoco aparece allí, es posible que todavía nadie lo haya estudiado.','No study in the list mentions it in its title or abstract keywords (the keywords are in Spanish). Try the PubMed link above.'):T('No hay estudios con esos filtros.','No studies match those filters.')));
